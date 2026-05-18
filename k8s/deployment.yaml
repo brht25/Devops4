@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: devops3-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: devops3
+  template:
+    metadata:
+      labels:
+        app: devops3
+    spec:
+      containers:
+        - name: devops3
+          image: brht13/devops3:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
