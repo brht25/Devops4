@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: devops3
-          image: brht13/devops3:latest
+          image: brht13/devops4:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 8080

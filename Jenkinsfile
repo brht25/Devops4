@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        IMAGE_NAME = 'brht13/devops3'
+        IMAGE_NAME = 'brht13/devops4'
         IMAGE_TAG  = 'latest'
     }
 
@@ -14,7 +14,7 @@ pipeline {
         stage('Stage 1: Clone') {
             steps {
                 git branch: 'main',
-                    url: 'https://github.com/<YOUR_USERNAME>/<YOUR_REPO>.git'
+                    url: 'https://github.com/brht25/Devops4.git'
             }
         }
 
