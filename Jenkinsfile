@@ -4,6 +4,8 @@ pipeline {
     environment {
         IMAGE_NAME = 'brht13/devops4'
         IMAGE_TAG  = 'latest'
+        JAVA_HOME  = '/Library/Java/JavaVirtualMachines/jdk-25.jdk/Contents/Home'
+        PATH       = "/Library/Java/JavaVirtualMachines/jdk-25.jdk/Contents/Home/bin:${env.PATH}"
     }
 
     triggers {
@@ -52,7 +54,7 @@ pipeline {
             steps {
                 sh 'kubectl apply -f k8s/deployment.yaml'
                 sh 'kubectl apply -f k8s/service.yaml'
-                sh 'kubectl rollout restart deployment/devops3-deployment'
+                sh 'kubectl rollout restart deployment/devops4-deployment'
             }
         }
     }

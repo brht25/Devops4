@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: devops3-deployment
+  name: devops4-deployment
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: devops3
+      app: devops4
   template:
     metadata:
       labels:
-        app: devops3
+        app: devops4
     spec:
       containers:
-        - name: devops3
+        - name: devops4
           image: brht13/devops4:latest
           imagePullPolicy: Always
           ports:
