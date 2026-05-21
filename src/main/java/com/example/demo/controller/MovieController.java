@@ -7,10 +7,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/api/movies")
 public class MovieController {
 
-    @GetMapping
+    @GetMapping({"/", "/api/movies"})
     public List<String> getMovies() {
         return List.of("The Godfather", "Inception", "Interstellar");
     }
