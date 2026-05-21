@@ -12,6 +12,6 @@ public class MovieController {
 
     @GetMapping
     public List<String> getMovies() {
-        return List.of("The Godfather", "iiiiii", "Inception", "Interstellar");
+        return List.of("The Godfather", "Inception", "Interstellar");
     }
 }
